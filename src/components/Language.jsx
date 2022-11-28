@@ -1,6 +1,6 @@
 import React from "react";
 
-const Language = () => {
+const Language = ({ name, img, options }) => {
   return <div>Language</div>;
 };
 
