@@ -1,13 +1,14 @@
 import "./App.css";
 import Header from "./components/Header";
 import Card from "./components/Card";
+import Container from "react-bootstrap/Container";
 
 function App() {
   return (
-    <div className="App">
+    <Container className="text-center mt-4">
       <Header />
       <Card />
-    </div>
+    </Container>
   );
 }
 
