@@ -1,14 +1,22 @@
 import Language from "./Language";
 import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import { data } from "../helper/data";
 
 const Card = () => {
   return (
     <Container className="rounded-4 mt-4" style={{ background: "#f48B29" }}>
       <h1>Language</h1>
-      {data.map((lang, index) => {
-        return <Language {...lang} key={index} />;
-      })}
+      <Row>
+        {data.map((lang, index) => {
+          return (
+            <Col>
+              <Language {...lang} key={index} />;
+            </Col>
+          );
+        })}
+      </Row>
     </Container>
   );
 };
