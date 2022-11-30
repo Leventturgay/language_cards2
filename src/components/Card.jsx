@@ -11,8 +11,8 @@ const Card = () => {
       <Row>
         {data.map((lang, index) => {
           return (
-            <Col>
-              <Language {...lang} key={index} />;
+            <Col sm={6} md={4} lg={3} key={index}>
+              <Language {...lang} />;
             </Col>
           );
         })}
