@@ -8,16 +8,17 @@ const Language = ({ name, img, options }) => {
     <Container
       onClick={() => setShowImage(!showImage)}
       style={{ background: "#ffdab9" }}
-      className="p-4 rounded-4"
+      className="p-4 rounded-4 h-100 lang-card"
+      type="button"
     >
       {showImage && (
         <Container>
-          <Image src={img} width="70%"></Image>
+          <Image src={img} width="70%" className="lang-logo"></Image>
           <h3 className="display-6">{name}</h3>
         </Container>
       )}
       {!showImage && (
-        <ul>
+        <ul className="h-100 d-flex flex-column justify-content-center">
           {options.map((item) => {
             return <li className="h5 text-start">{item}</li>;
           })}
